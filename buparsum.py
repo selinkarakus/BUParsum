@@ -176,23 +176,3 @@ plt.figure(figsize=(12, 8))
 ax = sns.barplot(x='x',y='y',data=df ,hue='Language')
 plt.show()
 
-'''
-languages = list(plot_dict.keys())
-X = list(output_dict.keys())
-X_axis = np.arange(len(X))
-plt.figure(figsize=(5,8))
-for i in range(len(languages)):
-  rect = plt.bar(X_axis - 0.2+0.4*i,list(plot_dict[languages[i]].values()), 0.8/len(languages) , label=languages[i])
-
-plt.legend()
-plt.xticks(X_axis, X)
-plt.show()
-Colaboratory kullanılarak oluşturuldu
-  plt.figure(figsize=(5,8))
-  bar1 = plt.bar(list(output_dict.keys()), list(output_dict.values()), color = f'{color}' )
-  for rect in bar1:
-      plt.title(f"{language}")
-      height = rect.get_height()
-      plt.text(rect.get_x() + rect.get_width() / 2.0, height, f'{height:.0f}', ha='center', va='bottom')
-  plt.show()
-'''
