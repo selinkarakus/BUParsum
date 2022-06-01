@@ -55,11 +55,11 @@ for option in options:
 
   main_output = []
 
-
-  def parser(file_names, output_name):
   #Some parts of this code was taken from a project by Karahan Sahin
   #https://github.com/karahan-sahin/Char-Level-Morphological-Parsing-with-Transformers
 
+  def parser(file_names, output_name):
+      """This function takes a language data file input that was written in line with the Universal Dependencies guidelines, parses it and returns the parsed data in txt format."""
       output = []
 
       for file_name in file_names:
@@ -134,30 +134,6 @@ for option in options:
                   f_out.write(f"{i}\t{j}\t{idt}\n")
 
   parser([default_lang], "parse_datatest")
-
-  def parse_sentences(file_names, output_name):
-
-      output = []
-
-      for file_name in file_names:
-
-          print(file_name)
-
-          ud_file = open(f'{file_name}', 'r', encoding='utf-8').read()
-
-          REGEX_BLOCK = '(\# sent_id = (.+?)\n# text = (.+?)\n)((.|\n)+?)\n(?=# sent_id)'
-
-          parses = re.findall(REGEX_BLOCK, ud_file)
-
-          for parse in parses:
-
-              output.append((parse[2], parse[1]))
-
-      with open(f"{output_name}", "w+", encoding='utf-8') as f_out:
-
-          for sent, idt in output:
-
-            f_out.write(f"{sent}\t{idt}\n")
 
   with open('/content/parse_datatest.txt', 'r') as file:
       data = file.read().replace('\n','')
