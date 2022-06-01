@@ -157,6 +157,6 @@ plt.ylabel("y", size=16)
 for i in range(len(options)):
   plt.bar_label(splot.containers[i])
 
-plt.savefig("annotate_barplot_with_Matplotlib_bar_label_Python.png")
+plt.savefig("visualized_data.png")
   
 plt.show()
