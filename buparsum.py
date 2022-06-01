@@ -145,8 +145,8 @@ for option in options:
 
 plt.figure(figsize=(8, 6))
 splot=sns.barplot(x='x',y='y',data=df ,hue='Language')
-plt.xlabel("x", size=16)
-plt.ylabel("y", size=16)
+plt.xlabel("Features", size=16)
+plt.ylabel("Values", size=16)
 
 for i in range(len(options)):
   plt.bar_label(splot.containers[i])
