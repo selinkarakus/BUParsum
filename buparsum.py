@@ -3,6 +3,7 @@ import re
 import sys
 from collections import defaultdict 
 import matplotlib.pyplot as plt
+!pip install --upgrade matplotlib
 from numpy import array
 import pandas as pd
 import seaborn as sns
@@ -172,7 +173,14 @@ for option in options:
   temp_df['Language'] = language
   df=pd.concat([df, temp_df])
 
-plt.figure(figsize=(12, 8))
-ax = sns.barplot(x='x',y='y',data=df ,hue='Language')
-plt.show()
+plt.figure(figsize=(8, 6))
+splot=sns.barplot(x='x',y='y',data=df ,hue='Language')
+plt.xlabel("x", size=16)
+plt.ylabel("y", size=16)
 
+for i in range(len(options)):
+  plt.bar_label(splot.containers[i])
+
+plt.savefig("annotate_barplot_with_Matplotlib_bar_label_Python.png")
+
+plt.show()
