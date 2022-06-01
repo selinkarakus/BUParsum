@@ -2,7 +2,7 @@
 
 The project BUParsum aims to offer a solution to the lack of high-quality language data to be used in NLP studies, showing the frequency of morphological or syntactic features of the languages. 
 
-BUParsum takes data file input from the user or uses the default language datasets retrieved from the Universal Dependencies and provides a chart that demonstrates the distribution of given syntactic and morphological features as output. 
+BUParsum uses the default language datasets retrieved from the Universal Dependencies and provides a chart that demonstrates the distribution of given syntactic and morphological features as output. 
 
 #How to Use
 
