@@ -27,27 +27,21 @@ for option in options:
   input_list = []
   if option == '1':
     default_lang = '/content/en_partut-ud-dev.conllu'
-    color = '#F51B1B'
     language = 'English'
   elif option == '2':
     default_lang = '/content/de_gsd-ud-dev.conllu'
-    color = '#BB1BF5'
     language = 'German'
   elif option == '3':
     default_lang = '/content/tr_boun-ud-dev.conllu'  
-    color = '#1B5CF5'
     language = 'Turkish'
   elif option == '4':
     default_lang = '/content/fr_partut-ud-dev.conllu'
-    color = '#1BF5D8'
     language = 'French'
   elif option == '5':
     default_lang = '/content/es_gsd-ud-dev.conllu'
-    color = '#F5961B'
     language = 'Spanish'
   elif option == '6':
     default_lang = []
-    color = '#C9F51B'
     language = 'Your data'
   else:
     print("Invalid input.")
